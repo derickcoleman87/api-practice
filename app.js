@@ -18,7 +18,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
           .then((response) => response.json())
           .then((comments) => {
             let commentContainer = document.createElement("div");
-            commentContainer.className = ".comment-container";
+            commentContainer.className = "comment-container";
 
             for (let i = 0; i < comments.length; i++) {
               let comment = document.createElement("div");
@@ -30,7 +30,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
                   `;
 
               commentContainer.append(comment);
-              document.querySelector(".post").append(commentContainer);
+              post.append(commentContainer);
             }
           });
       });
