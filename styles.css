@@ -24,7 +24,13 @@
 
 #comment-container {
   margin-top: 10px;
+  background-color: #f0d3f7;
+  display: grid;
+  justify-items: center;
+  padding: 20px;
+  border-radius: 30px;
 }
+
 #comment {
   border: 1px solid #111827;
   background-color: #c084fc;
