@@ -13,16 +13,16 @@ fetch("https://jsonplaceholder.typicode.com/posts")
         console.log("click");
         // fetch not working properly
         fetch(
-          `"https://jsonplaceholder.typicode.com/posts/${data[i].id}/comments"`
+          `https://jsonplaceholder.typicode.com/posts/${data[i].id}/comments`
         )
           .then((response) => response.json())
           .then((comments) => {
             let commentContainer = document.createElement("div");
-            commentContainer.className = "comment-container";
+            commentContainer.id = "comment-container";
 
             for (let i = 0; i < comments.length; i++) {
               let comment = document.createElement("div");
-              comment.className = "comment";
+              comment.id = "comment";
               comment.innerHTML = `
                     <h1>${comments[i].name}</h1>
                     <h2>${comments[i].email}</h2>
@@ -35,6 +35,13 @@ fetch("https://jsonplaceholder.typicode.com/posts")
           });
       });
 
+      post.addEventListener("dblclick", function () {
+        console.log("dblclick");
+        let commentContainer = document.getElementById("#comment-container");
+        let comment = document.getElementsByClassName("#comment");
+        // removes post not just comments.
+        post.remove(commentContainer);
+      });
       document.querySelector(".post-container").append(post);
     }
   });

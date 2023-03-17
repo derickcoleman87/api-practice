@@ -1,3 +1,2 @@
 -Need to get comments to be in own container not part of post. As of right now post-container expands to incorporate comments container. 
 -Add animation to comment section for when it renders on screen.
--Add infinte scroll.
