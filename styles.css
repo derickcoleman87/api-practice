@@ -20,6 +20,11 @@
   background-color: #bda9d4;
   border-radius: 20px;
   width: 50%;
+  cursor: pointer;
+}
+
+.name {
+  font-weight: 700;
 }
 
 #comment-container {
