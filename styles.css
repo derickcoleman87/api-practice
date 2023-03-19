@@ -37,9 +37,11 @@
 }
 
 #comment {
+  margin: 5px;
   border: 1px solid #111827;
   background-color: #c084fc;
   padding: 10px;
   border-radius: 10px;
   width: 80%;
+  overflow-wrap: break-word;
 }
